@@ -5,9 +5,66 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  text-align: center;
+  /* background-image: url("https://cdn4.vectorstock.com/i/1000x1000/54/48/color-triangular-abstract-background-vector-22655448.jpg"); */
+
+} 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.header{
+  margin: 2em 0 2em 2em;
+  padding-bottom: 1em;
+  border-bottom: 3px solid;
+  color: darkslategray;
+  
+
+}
+.header a{
+  margin:  0 1em 0 1em;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: darkblue;
+}
+.content{
+  margin-left: 2em;
+  font-size: 1.2em;
+  
+}
+.message{
+  color: red;
+  font-size: 0.7em;
+}
+form{
+  text-align: center;
+  font-size: 1.5em;
+
+}
+
+h5{
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size: xx-large;
+}
+.button{
+  font-size: medium;
+  border-width: 2px;
+  border-color: cornflowerblue;
+  box-shadow: 2px,2px,2px;
+  color: blue;
+  margin-top: 20px; 
+	margin-bottom: 20px;
+
+}
+.home{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight:bolder;
+  font-size: x-large;
+
+}
+.para{
+  color: brown;
 }
