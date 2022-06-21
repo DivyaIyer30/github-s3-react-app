@@ -59,7 +59,7 @@ function App() {
         <NavLink exact activeClassName="active" to="/">Home</NavLink>
         <NavLink activeClassName="active" to="/register">Register</NavLink>
         <NavLink activeClassName="active" to="/login">Login</NavLink>
-        <NavLink activeClassName="active" to="/premium-content">Services</NavLink>
+        <NavLink activeClassName="active" to="/premium-content">Website</NavLink>
       </div>
       <div className="content">
         <Switch>

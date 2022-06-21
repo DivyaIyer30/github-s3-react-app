@@ -10,7 +10,7 @@ const PremiumContent = (props) => {
     }
     return (
         <div>
-            Hello {name}! You have successfully logged in!!! Welcome to premium content. <br/>
+            Hello {name}! You have successfully logged in!!! Welcome to Website. <br/>
             <input type = "button" value= "Logout" onClick={logoutHandler}/>
 
         </div>
