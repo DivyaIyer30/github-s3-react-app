@@ -3,7 +3,7 @@ import { getUser,resetUserSession } from './service/AuthService';
 
 const PremiumContent = (props) => {
     const user=getUser();
-    const name=user!='undefined' && user?user.name:'';
+    const name = user !== 'undefined' && user ? user.name : '';
     const logoutHandler = () => {
         resetUserSession();
         props.history.push('/login');
