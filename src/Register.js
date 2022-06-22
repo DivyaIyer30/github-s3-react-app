@@ -15,10 +15,9 @@ const Register = () => {
             return;
         }
         setMessage(null);
-       // console.log('submit button is pressed');
-       const requestConfig ={
+        const requestConfig ={
         headers: {
-            'x-api-key': process.env.REACT_APP_API_KEY
+            'x-api-key': 'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'//process.env.REACT_APP_API_KEY
         }
        }
        const requestBody ={

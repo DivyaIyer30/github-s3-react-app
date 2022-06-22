@@ -11,10 +11,8 @@ import {getUser, getToken, setUserSession, resetUserSession} from "./service/Aut
 
 const verifyTokenAPIUrl = 'https://8xmmyd6qz4.execute-api.us-east-1.amazonaws.com/prod/verify';
 
+//require("dotenv").config();
 
-//import useNavigate from "react-router-dom";
-//const navigate = useNavigate(); 
-//navigate();
 function App() {
 
   const  [isAuthenicating, setAuthenicating] = useState(true);
@@ -26,7 +24,7 @@ function App() {
 
     const requestConfig ={
       headers: {
-          'x-api-key': process.env.REACT_APP_API_KEY
+          'x-api-key': 'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'//process.env.REACT_APP_API_KEY
       }
      }
      const requestBody ={
