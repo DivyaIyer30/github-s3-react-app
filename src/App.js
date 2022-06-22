@@ -26,7 +26,7 @@ function App() {
 
     const requestConfig ={
       headers: {
-          'x-api-key':'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'
+          'x-api-key': process.env.REACT_APP_API_KEY
       }
      }
      const requestBody ={
