@@ -4,8 +4,20 @@ import './index.css';
 import App from './App';
 import axios from "axios";
 
+const {readFileSync} = require ('fs');
 
-const baseURL = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
+let getUrl = () => {
+  let outputUrl = JSON.parse(readFileSync('outputs.json'));
+  return outputUrl.invoke_arn.value;
+}
+
+let getStage = () => {
+  let stageName = JSON.parse(readFileSync('outputs.json'));
+  return stageName.stage_name.value;
+}
+
+const baseURL = getUrl + getStage;
+//const baseURL =  "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
