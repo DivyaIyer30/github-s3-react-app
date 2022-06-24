@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+//import axios from '@axios';
 import {setUserSession} from './service/AuthService'
 //import { baseUrl } from './App.js';
+import axiosInstance from "./index.js";
 
 //const loginAPIUrl = baseUrl+"/login";
 const Login = (props) => {
@@ -19,14 +20,14 @@ const Login = (props) => {
         // console.log('submit button is pressed');
         const requestConfig ={
         headers: {
-            'x-api-key': 'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'//process.env.REACT_APP_API_KEY
+            'x-api-key': '7JKQRCuKLo5xs1hVmt8JP5ipHJXlRy5f6zlju0V4'//process.env.REACT_APP_API_KEY
         }
        }
        const requestBody ={
         username : username,
         password : password 
        }
-       await axios.post('login', requestBody, requestConfig).then(response =>
+       axiosInstance.post('/login', requestBody, requestConfig).then(response =>
         {
             setUserSession(response.data.user, response.data.token);
             props.history.push('/premium-content');

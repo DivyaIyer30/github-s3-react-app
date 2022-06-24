@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+//import axios from '@axios';
 //import { baseUrl } from './App.js';
+import axiosInstance from "./index.js";
 
 //const registerUrl = baseUrl+"/register";
 const Register = () => {
@@ -30,7 +31,7 @@ const Register = () => {
         name : name
 
        }
-       await axios.post('register', requestBody, requestConfig).then(response =>
+       axiosInstance.post('/register', requestBody, requestConfig).then(response =>
         {
             setMessage('Registeration Successful ');
 

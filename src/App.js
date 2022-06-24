@@ -1,4 +1,4 @@
-import axios from "axios";
+//import axios from "axios";
 import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
@@ -8,10 +8,9 @@ import PublicRoute from "./routes/PublicRoute";
 import PrivateRoute from "./routes/PrivateRoute";
 import React, { useState, useEffect } from "react";
 import {getUser, getToken, setUserSession, resetUserSession} from "./service/AuthService";
+import axiosInstance from "./index.js";
 
 //export const baseUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
-
-axios.defaults.baseURL = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
 
 //const verifyTokenAPIUrl = baseUrl+"/verify";
 
@@ -26,14 +25,14 @@ function App() {
 
     const requestConfig ={
       headers: {
-          'x-api-key': 'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'//process.env.REACT_APP_API_KEY
+          'x-api-key': '7JKQRCuKLo5xs1hVmt8JP5ipHJXlRy5f6zlju0V4'//process.env.REACT_APP_API_KEY
       }
      }
      const requestBody ={
       username : getUser(),
       token : token
      }
-     await axios.post('verify', requestBody, requestConfig).then(response =>
+     axiosInstance.post('/verify', requestBody, requestConfig).then(response =>
       {
           setUserSession(response.data.user, response.data.token);
           setAuthenicating(false);
