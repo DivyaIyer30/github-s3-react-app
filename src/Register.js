@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { baseUrl } from './App.js';
+//import { baseUrl } from './App.js';
 
-const registerUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/register";
+//const registerUrl = baseUrl+"/register";
 const Register = () => {
     const[name,setName] = useState('');
     const[email,setEmail] = useState('');
@@ -30,7 +30,7 @@ const Register = () => {
         name : name
 
        }
-       axios.post(registerUrl, requestBody, requestConfig).then(response =>
+       await axios.post('register', requestBody, requestConfig).then(response =>
         {
             setMessage('Registeration Successful ');
 
