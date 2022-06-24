@@ -19,7 +19,7 @@ const Login = (props) => {
         // console.log('submit button is pressed');
         const requestConfig ={
         headers: {
-            'x-api-key': 'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'//process.env.REACT_APP_API_KEY
+            'x-api-key': '7JKQRCuKLo5xs1hVmt8JP5ipHJXlRy5f6zlju0V4'//process.env.REACT_APP_API_KEY
         }
        }
        const requestBody ={
