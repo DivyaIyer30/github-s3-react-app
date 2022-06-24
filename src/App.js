@@ -11,7 +11,7 @@ import {getUser, getToken, setUserSession, resetUserSession} from "./service/Aut
 
 export const baseUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
 
-const verifyTokenAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/verify";
+const verifyTokenAPIUrl = baseUrl+"/verify";
 
 function App() {
 
