@@ -9,9 +9,9 @@ import PrivateRoute from "./routes/PrivateRoute";
 import React, { useState, useEffect } from "react";
 import {getUser, getToken, setUserSession, resetUserSession} from "./service/AuthService";
 
-const verifyTokenAPIUrl = 'https://8xmmyd6qz4.execute-api.us-east-1.amazonaws.com/prod/verify';
+export const baseUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
 
-//require("dotenv").config();
+const verifyTokenAPIUrl = baseUrl+"/verify";
 
 function App() {
 

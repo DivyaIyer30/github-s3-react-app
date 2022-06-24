@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-const registerUrl = 'https://8xmmyd6qz4.execute-api.us-east-1.amazonaws.com/prod/register';
+import { baseUrl } from './App.js';
+
+const registerUrl = baseUrl+"/register";
 const Register = () => {
     const[name,setName] = useState('');
     const[email,setEmail] = useState('');
@@ -15,6 +17,7 @@ const Register = () => {
             return;
         }
         setMessage(null);
+        // console.log('submit button is pressed');
         const requestConfig ={
         headers: {
             'x-api-key': 'ajPjq2hvZ520RQheQwrvhl0kc4odoTb5tNsTd4N0'//process.env.REACT_APP_API_KEY
