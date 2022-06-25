@@ -10,7 +10,7 @@ terraform {
 provider "aws" { 
   region     = AWS_DEFAULT_REGION
   access_key = AWS_ACCESS_KEY_ID
-  secret_key = AWS_DEFAULT_REGION
+  secret_key = AWS_SECRET_ACCESS_KEY
 }
 
 # allows to access aws account id
