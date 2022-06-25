@@ -10,7 +10,7 @@ import React, { useState, useEffect } from "react";
 import {getUser, getToken, setUserSession, resetUserSession} from "./service/AuthService";
 import axiosInstance from "./index.js";
 
-//const verifyTokenAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/verify";
+const verifyTokenAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/verify";
 
 function App() {
 
@@ -30,8 +30,8 @@ function App() {
       username : getUser(),
       token : token
      }
-     //axios.post(verifyTokenAPIUrl, requestBody, requestConfig).then(response =>
-     axiosInstance.post('/verify', requestBody, requestConfig).then(response =>
+     axios.post(verifyTokenAPIUrl, requestBody, requestConfig).then(response =>
+     //axiosInstance.post('/verify', requestBody, requestConfig).then(response =>
       {
           setUserSession(response.data.user, response.data.token);
           setAuthenicating(false);

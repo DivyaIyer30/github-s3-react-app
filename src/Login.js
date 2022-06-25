@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {setUserSession} from './service/AuthService'
 import axiosInstance from "./index.js";
 
-//const loginAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/login";
+const loginAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/login";
 const Login = (props) => {
     const[username,setUsername] = useState('');
     const[password,setPassword] = useState('');
@@ -25,8 +25,8 @@ const Login = (props) => {
         username : username,
         password : password 
        }
-       //axios.post('/loginAPIUrl', requestBody, requestConfig).then(response =>
-       axiosInstance.post('/login', requestBody, requestConfig).then(response =>
+       axios.post('/loginAPIUrl', requestBody, requestConfig).then(response =>
+       //axiosInstance.post('/login', requestBody, requestConfig).then(response =>
         {
             setUserSession(response.data.user, response.data.token);
             props.history.push('/premium-content');
