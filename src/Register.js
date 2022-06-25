@@ -30,7 +30,7 @@ const Register = () => {
         name : name
 
        }
-       axios.post('registerUrl', requestBody, requestConfig).then(response =>
+       axios.post(registerUrl, requestBody, requestConfig).then(response =>
        //axiosInstance.post('/register', requestBody, requestConfig).then(response =>
         {
             setMessage('Registeration Successful ');
