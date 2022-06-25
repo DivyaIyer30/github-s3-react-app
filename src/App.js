@@ -1,4 +1,4 @@
-//import axios from "axios";
+import axios from "axios";
 import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
