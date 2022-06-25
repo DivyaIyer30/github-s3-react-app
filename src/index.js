@@ -4,19 +4,12 @@ import './index.css';
 import App from './App';
 import axios from "axios";
 
-const {readFileSync} = require ('fs');
+const fs = require('fs')
+const loadJSON = JSON.parse(fs.readFileSync('./data.json'));
+const getUrl = loadJSON.invoke_arn.value;
+const getStage = loadJSON.stage_name.value;
+const baseURL = getUrl+getStage;
 
-let getUrl = () => {
-  let outputUrl = JSON.parse(readFileSync('outputs.json'));
-  return outputUrl.invoke_arn.value;
-}
-
-let getStage = () => {
-  let stageName = JSON.parse(readFileSync('outputs.json'));
-  return stageName.stage_name.value;
-}
-
-const baseURL = getUrl + getStage;
 //const baseURL =  "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev";
 
 const axiosInstance = axios.create({
