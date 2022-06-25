@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {setUserSession} from './service/AuthService'
-import axios from "axios";
+import axios from 'axios';
 import axiosInstance from "./index.js";
 
 const loginAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/login";

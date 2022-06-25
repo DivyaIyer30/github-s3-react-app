@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import axios from "axios";
+import axios from 'axios';
 
 const fs = require('fs');
 const loadJSON = JSON.parse(fs.readFileSync('outputs.json'));
