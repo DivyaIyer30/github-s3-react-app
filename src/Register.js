@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+//import axios from 'axios';
 import axiosInstance from "./index.js";
 
-const registerUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/register";
+//const registerUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/register";
 const Register = () => {
     const[name,setName] = useState('');
     const[email,setEmail] = useState('');

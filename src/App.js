@@ -1,4 +1,4 @@
-import axios from 'axios';
+//import axios from 'axios';
 import { BrowserRouter, NavLink, Route, Switch } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Login";
@@ -10,7 +10,7 @@ import React, { useState, useEffect } from "react";
 import {getUser, getToken, setUserSession, resetUserSession} from "./service/AuthService";
 import axiosInstance from "./index.js";
 
-const verifyTokenAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/verify";
+//const verifyTokenAPIUrl = "https://954agpq9fl.execute-api.us-east-1.amazonaws.com/dev/verify";
 
 function App() {
 
