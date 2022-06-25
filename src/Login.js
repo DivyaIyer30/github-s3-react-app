@@ -26,8 +26,8 @@ const Login = (props) => {
         username : username,
         password : password 
        }
-       axios.post(loginAPIUrl, requestBody, requestConfig).then(response =>
-       //axiosInstance.post('/login', requestBody, requestConfig).then(response =>
+       //axios.post(loginAPIUrl, requestBody, requestConfig).then(response =>
+       axiosInstance.post('/login', requestBody, requestConfig).then(response =>
         {
             setUserSession(response.data.user, response.data.token);
             props.history.push('/premium-content');
